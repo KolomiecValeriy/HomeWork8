@@ -1,0 +1,3 @@
+kolomiets_twig_homepage:
+    path:     /
+    defaults: { _controller: KolomietsTwigBundle:Default:index }
