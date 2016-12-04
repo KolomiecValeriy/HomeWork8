@@ -1,1 +1,7 @@
-Hello World!
+<h1><b>Some page {{ page }}</b></h1>
+
+{% for i in 1..10 %}
+    {% if (page != i) %}
+        <br><a href="{{ url_home + i}}">{{ i }}</a>
+    {% endif %}
+{% endfor %}
