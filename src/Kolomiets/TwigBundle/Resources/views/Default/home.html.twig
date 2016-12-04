@@ -1,2 +1,24 @@
-{% extends "base.html.twig" %}
-{% block title %}{{ parent() }}{% endblock %}
+{% extends "KolomietsTwigBundle:Default:footer.html.twig" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block header %}
+    {% include 'KolomietsTwigBundle:Default:header.html.twig' %}
+{% endblock %}
+
+{% block content %}
+    {% embed "KolomietsTwigBundle:Default:content.html.twig"%}
+        {% block left_content %}
+            <b>
+                {% filter upper|escape %}
+                    <i>New content left block</i>
+                {% endfilter %}
+            </b>
+        {% endblock %}
+
+        {% block rihgt_content %}
+            <b>New content right block</b>
+            {{ "now"|date("m.d.Y") }}
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

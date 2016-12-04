@@ -24,6 +24,6 @@ class HomeController extends Controller
 
     public function homeAction()
     {
-        return $this->render('KolomietsTwigBundle:Default:home.html.twig');
+        return $this->render('KolomietsTwigBundle:Default:home.html.twig', array('url'=>$this->generateUrl('kolomiets_twig_homepage')));
     }
 }
